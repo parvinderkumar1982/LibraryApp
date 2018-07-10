@@ -10,6 +10,8 @@ import { DetailsComponent } from './details/details.component';
 import { LibraryComponent } from './library/library.component';
 import { BooksComponent } from './books/books.component';
 import { MembersComponent } from './members/members.component';
+import { LibraryService } from './library/library.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { MembersComponent } from './members/members.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LibraryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
